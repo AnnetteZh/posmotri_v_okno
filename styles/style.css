@@ -62,6 +62,10 @@ ol {
 
 .result__video {
   width: 711px;
+  height: 395px;
+  object-fit: fill;
+  object-position: center;
+  margin-bottom: -15px;
 }
 
 .result__video-container {
@@ -81,6 +85,7 @@ ol {
   justify-content: space-between;
   width: fit-content;
   gap: 15px;
+  margin-bottom: 6px;
 }
 
 .search-form__fieldset {
@@ -88,12 +93,12 @@ ol {
 }
 
 .search-form__fieldset-title {
-  font-family: Fira Sans Condensed;
+  font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  margin-bottom: 10px;
+  margin-bottom: 7px;
 }
 
 .search-form__textfield {
@@ -164,7 +169,15 @@ ol {
   align-items: flex-start;
   overflow: auto;
   position: relative;
-  gap: 30px;
+}
+
+.content__list-item {
+  margin-bottom: 30px;
+  border: 1px solid transparent;
+}
+
+.content__list-item:last-child {
+  margin-bottom: none;
 }
 
 .content__video-card-title {
@@ -178,7 +191,9 @@ ol {
 }
 
 .content__card-link {
+  display: block;
   outline: none;
+  text-decoration: none;
 }
 
 .content__video-card {
@@ -186,8 +201,12 @@ ol {
   justify-content: space-between;
 }
 
+.content__card-link_current {
+  background-color: #545050;
+}
+
 .content__video-card-description {
-  font-family: Fira Sans Condensed;
+  font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -196,12 +215,11 @@ ol {
   width: 200px;
 }
 
-.content__card-link {
-  text-decoration: none;
-}
-
 .content__video-card-thumbnail {
   width: 194px;
+  height: 103px;
+  object-fit: fill;
+  object-position: center;
 }
 
 .button {
@@ -209,7 +227,7 @@ ol {
   color: #FFF;
   border: 1px solid #fff;
   text-align: center;
-  font-family: Fira Sans Condensed;
+  font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
@@ -249,6 +267,7 @@ ol {
 
 .search-form__label:hover > .search-form__label-text {
   text-decoration: underline;
+  cursor: pointer;
 }
 
 .button:hover {
@@ -277,6 +296,6 @@ ol {
   outline-offset: -4px;
 }
 
-.content__list-item:focus-visible {
-  border : 1px solid #FFF;
+.content__card-link:focus-visible {
+  border: 1px solid #FFF;
 }
